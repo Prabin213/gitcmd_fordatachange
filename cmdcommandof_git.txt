@@ -1,0 +1,189 @@
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop←[36m
+$ pwd
+/c/Users/BCC/Desktop
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop
+$ mkdir story
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop
+$ cd story
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story
+$ touch chap1.txt
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story
+$ open chap1.txt
+bash: open: command not found
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story
+$ open chap1.txt
+bash: open: command not found
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story
+$ ls
+chap1.txt
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story (master)
+$ ls -a
+./  ../  .git/  chap1.txt
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        chap1.txt
+
+nothing added to commit but untracked files present (use "git add" to 
+track)
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story (master)
+$ git add chap1.txt
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   chap1.txt
+
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story (master)
+$ git commit -m "chapter 1 is complete"
+[master (root-commit) 5eca36c] chapter 1 is complete
+ 1 file changed, 1 insertion(+)
+ create mode 100644 chap1.txt
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story (master)
+$ git log
+commit 5eca36c1bb4757d3be8c0bebb215ea5ec0122253 (HEAD -> master)
+Author: Prabin.213 <hmsprabin25@gmail.com>
+Date:   Thu Sep 1 10:45:22 2022 +0530
+
+    chapter 1 is complete
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story (master)
+$ touch chap2.txt
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story (master)
+$ touch chap3.txt
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)      
+        chap2.txt
+        chap3.txt
+
+nothing added to commit but untracked files present (use "git add" to 
+track)
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story (master)
+$ git add .
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   chap2.txt
+        new file:   chap3.txt
+
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story (master)
+$ git commit-m "chapter 2 and 3 is complete"
+git: 'commit-m' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit-tree
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story (master)
+$ gti log
+bash: gti: command not found
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story (master)
+$ git log
+commit 5eca36c1bb4757d3be8c0bebb215ea5ec0122253 (HEAD -> master)
+Author: Prabin.213 <hmsprabin25@gmail.com>
+Date:   Thu Sep 1 10:45:22 2022 +0530
+
+    chapter 1 is complete
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story (master)
+$ git commit -m "chapter 2 and 3 is complete"
+[master 5be36fd] chapter 2 and 3 is complete
+ 2 files changed, 2 insertions(+)
+ create mode 100644 chap2.txt
+ create mode 100644 chap3.txt
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story (master)
+$ git log
+commit 5be36fd84974c9146ae1df94012c1ef871045933 (HEAD -> master)
+Author: Prabin.213 <hmsprabin25@gmail.com>
+Date:   Thu Sep 1 10:51:49 2022 +0530
+
+    chapter 2 and 3 is complete
+
+commit 5eca36c1bb4757d3be8c0bebb215ea5ec0122253
+Author: Prabin.213 <hmsprabin25@gmail.com>
+Date:   Thu Sep 1 10:45:22 2022 +0530
+
+    chapter 1 is complete
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story (master)
+$ gti status
+bash: gti: command not found
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   chap3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story (master)
+$ git diff chap3.txt
+diff --git a/chap3.txt b/chap3.txt
+index 4147801..5054a9c 100644
+--- a/chap3.txt
++++ b/chap3.txt
+@@ -1 +1,2 @@
+-earth has lunched rocket to mars for search of life.
+\ No newline at end of file
++earth has lunched rocket to mars for search of life.
++Then we landed on planet and got water
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story (master)
+$ git checkout
+M       chap3.txt
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story (master)
+$ git checkout chap3.txt
+Updated 1 path from the index
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story (master)
+$ ^C
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story (master)
+$ touch cmdcommandof_git.txt
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story (master)
+$ ^C
+
+BCC@DESKTOP-NTP1256 MINGW64 ~/Desktop/story (master)
+$
